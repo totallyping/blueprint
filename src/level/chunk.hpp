@@ -138,17 +138,21 @@ struct Chunk final : util::Tickable {
           offset(offset),
           offset_tiles(offset * SIZE),
           raw(this),
-          tiles(this) {
+          tiles(this)
+    {
         std::memset(&this->data, 0, sizeof(this->data));
     }
+
     Chunk(const Chunk &other) = default;
     Chunk(Chunk &&other) = default;
 
-    inline auto operator[](usize index) {
+    inline auto operator[](usize index)
+    {
         return this->raw[index];
     }
 
-    inline auto operator[](glm::ivec3 p) {
+    inline auto operator[](glm::ivec3 p)
+    {
         return this->raw[p];
     }
 

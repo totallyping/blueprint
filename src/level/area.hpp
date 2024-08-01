@@ -5,9 +5,11 @@
 #include "level/chunk.hpp"
 #include "level/gen.hpp"
 
-namespace level {
+namespace level
+{
 struct Area final
-    : util::Updateable, util::Tickable {
+    : util::Updateable, util::Tickable
+{
 
     // proxy for access to area data through chunk data proxy
     template <typename T>
